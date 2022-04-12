@@ -5,7 +5,6 @@ const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cors = require("cors");
-const dotenv = require("dotenv");
 // routes
 const userRoute = require("./routes/userRouter");
 const authRoute = require("./routes/auth");
@@ -32,7 +31,8 @@ app.get('/', function(req, res) {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
-  
-app.listen(process.ENV.PORT || 8000, () => {
+
+PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
     console.log("Backend server is running!");
 });
