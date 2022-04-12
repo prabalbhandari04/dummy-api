@@ -27,7 +27,7 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan("common"));
 app.get('/', function(req, res) {
-  res.send('App staging')
+  res.send('App deployed to production');
 })   
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
