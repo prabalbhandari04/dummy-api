@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cors = require("cors");
-
+const dotenv = require("dotenv");
 // routes
 const userRoute = require("./routes/userRouter");
 const authRoute = require("./routes/auth");
