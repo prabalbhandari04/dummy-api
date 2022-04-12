@@ -33,6 +33,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
   
-app.listen(8000, () => {
+app.listen(process.ENV.PORT || 8000, () => {
     console.log("Backend server is running!");
 });
